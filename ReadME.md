@@ -18,7 +18,7 @@ We were able to create both of the mentioned servers and found that the multithr
 
 To run the code use the main function found within [Code Folder](code).
 
-To switch between multi and single threads you will need to edit the [Main.java](code\Main.java) to the appropriate Class and run the server from there.
+To switch between multi and single threads you will need to edit the [Main.java](code\Main.java) to the appropriate Class, delete the Main.class file (in some editors it will used the cached code instead of the edited one) and run the server from there.
 
 In our test we used first postman, but found it lacking because of lack of ability to send packets simultaneously. We decided to switch over to Jmeter that allowed us to test the server a bit better with simultaneous packets from one client. The tool can be found [here](apache-jmeter-5.5) with the [Test File](apache-jmeter-5.5\Test.jmx) or on their [Website](https://jmeter.apache.org/). Refer to the [Getting Started](https://jmeter.apache.org/usermanual/get-started.html) section on their website or use the following method to copy our test method:
 
