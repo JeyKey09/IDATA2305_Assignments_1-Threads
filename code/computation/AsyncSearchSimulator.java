@@ -31,7 +31,6 @@ public class AsyncSearchSimulator implements Runnable {
             response.append(body);
 
             clientSocket.getOutputStream().write(response.toString().getBytes());
-            clientSocket.close();
         } catch (IOException | InterruptedException e) {
             // LOG error
         }
