@@ -19,6 +19,9 @@ public class MultiThreadedServer implements Runnable {
         this.serverPort = port;
     }
 
+    public MultiThreadedServer() {
+    }
+
     public void run() {
         try {
             openServerSocket();
@@ -28,8 +31,9 @@ public class MultiThreadedServer implements Runnable {
         }
 
         while (!isStopped()) {
-            try (Socket clientSocket = serverSocket.accept()) {
+            try {
                 // on receiving a request, execute the heavy computation in a new thread
+                Socket clientSocket = serverSocket.accept();
                 new Thread(
                         new AsyncSearchSimulator(
                                 clientSocket,
