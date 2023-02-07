@@ -8,3 +8,6 @@
 /dataSources.local.xml
 .idea
 *.iml
+
+/apache-jmeter-5.5/backups
+/jmeter.log
