@@ -14,15 +14,15 @@ public class SearchSimulator {
     private SearchSimulator() {
     }
 
-    public static void processClientRequest(Socket clientSocket) throws InterruptedException {
+    public static synchronized void processClientRequest(Socket clientSocket) throws InterruptedException {
         long time1 = System.currentTimeMillis();
         logger.info("Request processing started at: " + time1);
         Thread.sleep(10 * 1000);
         long time2 = System.currentTimeMillis();
-        logger.log(Level.INFO, "Request processing ended at: ", time2);
+        logger.log(Level.INFO, "Request processing ended at: " + time2);
         StringBuilder response = new StringBuilder();
         String body = ResponseGenerator.generatorResponseHTML(time1, time2);
-        response.append(ResponseGenerator.generatorResponseHeader(response.length()));
+        response.append(ResponseGenerator.generatorResponseHeader(body.length()));
         response.append(body);
         try {
             clientSocket.getOutputStream().write(response.toString().getBytes());
