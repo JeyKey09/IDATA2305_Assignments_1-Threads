@@ -4,7 +4,7 @@
 
 ### Task
 
-In this assignment we were meant to create 2 server applications were one was single threaded and other multi threaded. We had to our disposal the teachers [provided code template](https://gist.github.com/Pipe-Runner/b56d3315f5c9436992d57643c94052e5#file-directory-structure).
+In this assignment we were meant to create 2 server applications were one was single threaded and other multi threaded. We had to our disposal the teachers [provided code template](https://gist.github.com/Pipe-Runner/b56d3315f5c9436992d57643c94052e5).
 
 ### Procedure
 
